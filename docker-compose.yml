@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "your-root-password"
+    networks:
+      - my_network  # Conecta el contenedor a una red externa
+    ports:
+      - "5310:3306"  # Expone el puerto 3306 de MySQL en el puerto 5010 del host
+
+networks:
+  my_network:
+    external: true
