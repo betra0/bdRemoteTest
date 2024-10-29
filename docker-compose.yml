@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysql:latest
+    image: mysql:8.0.39
     environment:
       MYSQL_ROOT_PASSWORD: "your-root-password"
     networks:
